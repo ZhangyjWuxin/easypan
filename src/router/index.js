@@ -89,9 +89,9 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const userInfo = VueCookies.get("userInfo");
   if (to.meta.needLogin != null && to.meta.needLogin && userInfo == null) {
-    router.push("/login");
+    router.push("/login")
   }
-  next();
+  next()
 })
 
 export default router
